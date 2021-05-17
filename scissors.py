@@ -6,4 +6,3 @@ class Scissors:
         self.name = 'Scissors'
         self.beats = ['Lizard', 'Paper']
         self.loses_to = ['Spock', 'Rock']
-

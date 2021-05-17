@@ -36,18 +36,18 @@ def run_game():
                 player_one_points += 1
                 print(f'{player_one_points} - {player_two_points}')
                 print('________________________________')
-                print('________________________________')
+                print('________________________________\n\n\n\n\n')
             elif user_result.loses_to[0] == computer_result or user_result.loses_to[1] == computer_result:
                 print('Player two wins the round')
                 player_two_points += 1
                 print(f'{player_one_points} - {player_two_points}')
                 print('________________________________')
-                print('________________________________')
+                print('________________________________\n\n\n\n\n')
             elif user_result.name == computer_result:
                 print("It's a tie, how boring")
                 print(f'{player_one_points} - {player_two_points}')
                 print('________________________________')
-                print('________________________________')
+                print('________________________________\n\n\n\n\n')
             else:
                 print('invalid input1')
             if player_one_points == 3:
@@ -67,7 +67,7 @@ def run_game():
             user_choice_two = input("Player Two Input your choice\n________________________________")
             while user_choice_two != '0' and user_choice_two != '1' and user_choice_two != '2' and user_choice_two != '3' and user_choice_two != '4':
                 print('invalid choice')
-                user_choice_two2 = input("try again")
+                user_choice_two = input("try again")
             user_result_two = list_of_choices[int(user_choice_two)]
             print(f'Player One: {user_result_one.name}')
             print(f'Player Two: {user_result_two.name}')
@@ -76,27 +76,25 @@ def run_game():
                 player_one_points += 1
                 print(f'{player_one_points} - {player_two_points}')
                 print('________________________________')
-                print('________________________________')
+                print('________________________________\n\n\n\n\n')
             elif user_result_one.loses_to[0] == user_result_two.name or user_result_one.loses_to[1] == user_result_two.name:
                 print('Player two wins the round')
                 player_two_points += 1
                 print(f'{player_one_points} - {player_two_points}')
                 print('________________________________')
-                print('________________________________')
+                print('________________________________\n\n\n\n\n')
             elif user_result_one.name == user_result_two.name:
                 print("It's a tie, how boring")
                 print(f'{player_one_points} - {player_two_points}')
                 print('________________________________')
-                print('________________________________')
+                print('________________________________\n\n\n\n\n')
             if player_one_points == 3:
                 print('PLAYER ONE IS VICTORIOUS')
-
+            elif player_two_points == 3:
+                print('PLAYER TWO IS VICTORIOUS')
 
     player_select = input('1 or 2 players? (type 1 or 2)')
     if int(player_select) == 1:
         vs_computer()
     elif int(player_select) == 2:
         vs_player()
-
-
-
