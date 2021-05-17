@@ -27,7 +27,7 @@ def run_game():
             user_result = list_of_choices[int(user_choice)]
             computer_result = ai_turn()
             print(f'Player One: {user_result.name}')
-            print(f'Player One: {computer_result}')
+            print(f'Player Two: {computer_result}')
             if user_result.beats[0] == computer_result or user_result.beats[1] == computer_result:
                 print('Player one wins the round')
                 player_one_points += 1
