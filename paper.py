@@ -4,7 +4,7 @@ from choices import Choices
 class Paper(Choices):
 
     def __init__(self):
-        self.name = 'paper'
-        self.beats = ['rock', 'spock']
-        self.loses_to = ['scissors', 'lizard']
+        self.name = 'Paper'
+        self.beats = ['Rock', 'Spock']
+        self.loses_to = ['Scissors', 'Lizard']
         super().__init__()

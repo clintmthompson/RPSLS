@@ -4,7 +4,7 @@ from choices import Choices
 class Spock(Choices):
 
     def __init__(self):
-        self.name = 'spock'
-        self.beats = ['rock', 'scissors']
-        self.loses_to = ['lizard', 'paper']
+        self.name = 'Spock'
+        self.beats = ['Rock', 'Scissors']
+        self.loses_to = ['Lizard', 'Paper']
         super().__init__()
