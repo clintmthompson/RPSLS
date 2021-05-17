@@ -24,6 +24,9 @@ def run_game():
         player_two_points = 0
         while player_one_points < 3 and player_two_points < 3:
             user_choice = input("Select from:\n0: Rock\n1: Paper\n2: Scissors\n3: Lizard\n4: Spock\n________________________________")
+            while user_choice != '0' and user_choice != '1' and user_choice != '2' and user_choice != '3' and user_choice != '4':
+                print('invalid choice')
+                user_choice = input("try again")
             user_result = list_of_choices[int(user_choice)]
             computer_result = ai_turn()
             print(f'Player One: {user_result.name}')
@@ -45,6 +48,8 @@ def run_game():
                 print(f'{player_one_points} - {player_two_points}')
                 print('________________________________')
                 print('________________________________')
+            else:
+                print('invalid input1')
             if player_one_points == 3:
                 print('PLAYER ONE IS VICTORIOUS')
             elif player_two_points == 3:
@@ -55,8 +60,14 @@ def run_game():
         player_two_points = 0
         while player_one_points < 3 and player_two_points < 3:
             user_choice_one = input("Select from:\n0: Rock\n1: Paper\n2: Scissors\n3: Lizard\n4: Spock\nPlayer one input your choice")
+            while user_choice_one != '0' and user_choice_one != '1' and user_choice_one != '2' and user_choice_one != '3' and user_choice_one != '4':
+                print('invalid choice')
+                user_choice_one = input("try again")
             user_result_one = list_of_choices[int(user_choice_one)]
             user_choice_two = input("Player Two Input your choice\n________________________________")
+            while user_choice_two != '0' and user_choice_two != '1' and user_choice_two != '2' and user_choice_two != '3' and user_choice_two != '4':
+                print('invalid choice')
+                user_choice_two2 = input("try again")
             user_result_two = list_of_choices[int(user_choice_two)]
             print(f'Player One: {user_result_one.name}')
             print(f'Player Two: {user_result_two.name}')
@@ -79,8 +90,7 @@ def run_game():
                 print('________________________________')
             if player_one_points == 3:
                 print('PLAYER ONE IS VICTORIOUS')
-            elif player_two_points == 3:
-                print('PLAYER TWO IS VICTORIOUS')
+
 
     player_select = input('1 or 2 players? (type 1 or 2)')
     if int(player_select) == 1:
