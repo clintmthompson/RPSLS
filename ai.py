@@ -1,5 +1,9 @@
+from player import Player
 
-class Ai:
 
-    def __init__(self):
+class Ai(Player):
+
+    def __init__(self, ai_name):
+        self.name = ai_name
         super().__init__()
+
